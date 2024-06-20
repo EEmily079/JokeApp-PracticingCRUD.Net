@@ -1,0 +1,29 @@
+﻿@model List<JokesWebApp.Models.Domain.Joke>
+@{
+    
+}
+<h1>See All Jokes</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Joke Question</th>
+            <th>Joke Answer</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var joke in Model)
+        {
+          
+            <tr>
+                <td>@joke.Id</td>
+                <td>@joke.JokeQuestion</td>
+                <td>@joke.JokeAnswer</td>
+                <td><a href="Jokes/View/@joke.Id">view</a></td>
+            </tr>
+           
+        }
+    </tbody>
+</table>

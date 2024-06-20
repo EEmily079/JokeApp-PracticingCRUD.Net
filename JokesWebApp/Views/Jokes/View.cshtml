@@ -1,0 +1,22 @@
+﻿@model JokesWebApp.Models.UpdateJokeViewModel
+@{
+}
+<h1>View Jokes Details </h1>
+<form method="post" action="Add" class="mb-5">
+    <div class="mb-3">
+        <label for="" class=" = " form-label">ID</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class=" = " form-label">Joke Question</label>
+        <input type="text" class="form-control" asp-for="JokeQuestion">
+    </div>
+    <div class="mb-3">
+        <label for="" class=" = " form-label">Joke Answer</label>
+        <input type="text" class="form-control" asp-for="JokeAnswer">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger"
+        asp-action="Delete" asp-controller="Jokes">Detele</button>
+</form>
